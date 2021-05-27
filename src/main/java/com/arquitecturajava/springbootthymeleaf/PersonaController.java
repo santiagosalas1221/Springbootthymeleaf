@@ -14,10 +14,24 @@ public class PersonaController {
 	
 	@RequestMapping("/lista")
 	public String mostrarPersonas(Model modelo) {
-		
-		
-		
+
 		modelo.addAttribute("lista",miservicio.buscarTodos());
 		return "personas/lista";
 	}
+
+	@RequestMapping("formularioinsertar")
+	public String formularioInsertar() {
+
+		return "personas/formularioinsertar.html";
+	}
+
+	@RequestMapping("insertar")
+	public String insertar(Persona persona, Model modelo) {
+
+		miservicio.insertar(persona);
+		modelo.addAttribute("lista", miservicio.buscarTodos());
+		
+		return "personas/lista.html";
+	}
+
 }

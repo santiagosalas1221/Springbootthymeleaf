@@ -23,6 +23,6 @@ public class PersonaRepository {
 
     public void insertar(Persona persona) {
 
-        plantilla.update("intert into Personas (nombre, apellidos, edad) values (?,?,?)", persona.getNombre(), persona.getApellidos(), persona.getNombre());
+        plantilla.update("insert into Personas (nombre, apellidos, edad) values (?,?,?)", persona.getNombre(), persona.getApellidos(), persona.getEdad());
     }
 }
