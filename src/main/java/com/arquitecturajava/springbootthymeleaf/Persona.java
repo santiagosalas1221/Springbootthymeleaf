@@ -6,7 +6,11 @@ public class Persona {
 	private String apellidos;
 	private int edad;
 
-	//GETTER SETTERS
+	public Persona(String nombre) {
+		this.nombre = nombre;
+	}
+
+    //GETTER SETTERS
 	public String getNombre() {
 		return nombre;
 	}
