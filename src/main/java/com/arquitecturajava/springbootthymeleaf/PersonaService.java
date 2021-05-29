@@ -12,17 +12,17 @@ public class PersonaService {
 	@Autowired
 	PersonaRepository repositorio;
 
-	public List<Persona> buscarTodos() {
+	public Iterable<Persona> buscarTodos() {
 		
-		return repositorio.buscarTodos();
+		return repositorio.findAll();
 	}
 
 	public void insertar (Persona persona) {
-		repositorio.insertar(persona);
+		repositorio.save(persona);
 	}
 
 	public void borrar (Persona persona) {
-		repositorio.borrar(persona);
+		repositorio.delete(persona);
 	}
 	
 	
