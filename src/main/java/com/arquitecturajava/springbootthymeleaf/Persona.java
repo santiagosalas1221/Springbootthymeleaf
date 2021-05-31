@@ -1,14 +1,7 @@
 package com.arquitecturajava.springbootthymeleaf;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="personas")
 public class Persona {
 
-	@Id
 	private String nombre;
 	private String apellidos;
 	private int edad;
