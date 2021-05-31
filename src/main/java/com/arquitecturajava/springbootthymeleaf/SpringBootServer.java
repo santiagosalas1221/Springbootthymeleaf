@@ -10,5 +10,6 @@ public class SpringBootServer {
 		SpringApplication.run(SpringBootServer.class, args);
 	}
 
+
 }
 
